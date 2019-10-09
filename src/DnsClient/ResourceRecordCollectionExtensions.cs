@@ -203,6 +203,16 @@ namespace System.Linq
         }
 
         /// <summary>
+        /// Filters the elements of an <see cref="IEnumerable{T}"/> to return <see cref="SpfRecord"/>s only.
+        /// </summary>
+        /// <param name="records">The records.</param>
+        /// <returns>The list of <see cref="SpfRecord"/>.</returns>
+        public static IEnumerable<SpfRecord> SpfRecords(this IEnumerable<DnsResourceRecord> records)
+        {
+            return records.OfType<SpfRecord>();
+        }
+
+        /// <summary>
         /// Filters the elements of an <see cref="IEnumerable{T}"/> to return <see cref="DnsResourceRecord"/>s
         /// which have the <paramref name="type"/>.
         /// </summary>

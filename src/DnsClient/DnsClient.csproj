@@ -9,24 +9,24 @@
     <Product>DnsClient.NET</Product>
     <Description>DnsClient.NET is a simple yet very powerful and high performant open source library for the .NET Framework to do DNS lookups</Description>
 
-    <Copyright>Copyright (c) 2017 MichaConrad</Copyright>
-    <Authors>MichaCo</Authors>
+    <Copyright>Copyright (c) 2019 Alex Gebhard</Copyright>
+    <Authors>Alex Gebhard; MichaCo</Authors>
     <AssemblyName>DnsClient</AssemblyName>
 
     <AssemblyOriginatorKeyFile>../../tools/key.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
     <PublicSign Condition="'$(OS)' != 'Windows_NT'">true</PublicSign>
 
-    <PackageId>DnsClient</PackageId>
+    <PackageId>DnsClient.SG</PackageId>
     <PackageTags>dns;client;stub;resolver;name;server;core;service;discovery</PackageTags>
 
     <PackageIconUrl>http://dnsclient.michaco.net/favicon-196x196.png</PackageIconUrl>
     <PackageProjectUrl>http://dnsclient.michaco.net</PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/MichaCo/DnsClient.NET/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseUrl>https://github.com/SecureGovernment/DnsClient.NET/blob/master/LICENSE</PackageLicenseUrl>
     <WebPage>http://dnsclient.michaco.net</WebPage>
 
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/MichaCo/DnsClient.NET</RepositoryUrl>
+    <RepositoryUrl>https://github.com/SecureGovernment/DnsClient.NET</RepositoryUrl>
 
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <LangVersion>7.2</LangVersion>

@@ -198,5 +198,13 @@ namespace DnsClient
         /// <seealso href="https://tools.ietf.org/html/rfc4255">RFC 4255</seealso>
         /// <seealso cref="SshfpRecord"/>
         SSHFP = ResourceRecordType.SSHFP,
+
+        /// <summary>
+        /// A Sender Policy Framework (SPF) resource record.
+        /// </summary>
+        /// <seealso href="https://tools.ietf.org/html/rfc4408">RFC 4408</seealso>
+        /// <seealso href="https://tools.ietf.org/html/rfc7208">RFC 7208(Obsoletes RFC 4408)</seealso>
+        /// <seealso cref="SpfRecord"/>
+        SPF = ResourceRecordType.SPF,
     }
 }

@@ -181,6 +181,14 @@ namespace DnsClient.Protocol
         RRSIG = 46,
 
         /// <summary>
+        /// A Sender Policy Framework (SPF) resource record.
+        /// </summary>
+        /// <seealso href="https://tools.ietf.org/html/rfc4408">RFC 4408</seealso>
+        /// <seealso href="https://tools.ietf.org/html/rfc7208">RFC 7208(Obsoletes RFC 4408)</seealso>
+        /// <seealso cref="SpfRecord"/>
+        SPF = 99,
+
+        /// <summary>
         /// A Uniform Resource Identifier (URI) resource record.
         /// </summary>
         /// <seealso href="https://tools.ietf.org/html/rfc7553">RFC 7553</seealso>

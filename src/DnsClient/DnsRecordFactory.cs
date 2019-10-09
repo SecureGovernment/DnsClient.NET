@@ -147,6 +147,10 @@ namespace DnsClient
                     result = ResolveSshfpRecord(info);
                     break;
 
+                case ResourceRecordType.SPF:
+                    result = ResolveSPFRecord(info);
+                    break;
+
                 default:
                     // update reader index because we don't read full data for the empty record
                     _reader.Advance(info.RawDataLength);
@@ -218,10 +222,26 @@ namespace DnsClient
 
         private DnsResourceRecord ResolveTXTRecord(ResourceRecordInfo info)
         {
+            List<string> values, utf8Values;
+            ResolveTextBasedRecord(info, out values, out utf8Values);
+
+            return new TxtRecord(info, values.ToArray(), utf8Values.ToArray());
+        }
+
+        private DnsResourceRecord ResolveSPFRecord(ResourceRecordInfo info)
+        {
+            List<string> values, utf8Values;
+            ResolveTextBasedRecord(info, out values, out utf8Values);
+
+            return new SpfRecord(info, values.ToArray(), utf8Values.ToArray());
+        }
+
+        private void ResolveTextBasedRecord(ResourceRecordInfo info, out List<string> values, out List<string> utf8Values)
+        {
             int pos = _reader.Index;
 
-            var values = new List<string>();
-            var utf8Values = new List<string>();
+            values = new List<string>();
+            utf8Values = new List<string>();
             while ((_reader.Index - pos) < info.RawDataLength)
             {
                 var length = _reader.ReadByte();
@@ -232,8 +252,6 @@ namespace DnsClient
                 values.Add(escaped);
                 utf8Values.Add(utf);
             }
-
-            return new TxtRecord(info, values.ToArray(), utf8Values.ToArray());
         }
 
         private DnsResourceRecord ResolveSshfpRecord(ResourceRecordInfo info)
