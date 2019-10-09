@@ -20,9 +20,8 @@
     <PackageId>DnsClient.SG</PackageId>
     <PackageTags>dns;client;stub;resolver;name;server;core;service;discovery</PackageTags>
 
-    <PackageIconUrl>http://dnsclient.michaco.net/favicon-196x196.png</PackageIconUrl>
     <PackageProjectUrl>http://dnsclient.michaco.net</PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/SecureGovernment/DnsClient.NET/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <WebPage>http://dnsclient.michaco.net</WebPage>
 
     <RepositoryType>git</RepositoryType>
