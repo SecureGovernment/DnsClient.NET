@@ -8,7 +8,7 @@
     /// </para>
     /// </summary>
     /// <seealso href="https://tools.ietf.org/html/rfc4408">RFC 4408</seealso>
-    /// <seealso href="https://tools.ietf.org/html/rfc7208">RFC 7208(Obsoleted RFC 4408)</seealso>
+    /// <seealso href="https://tools.ietf.org/html/rfc7208">RFC 7208(Obsoletes RFC 4408)</seealso>
     public class SpfRecord : TxtRecord
     {
         /// <summary>
