@@ -138,7 +138,8 @@ namespace System.Linq
         /// <returns>The list of <see cref="TxtRecord"/>.</returns>
         public static IEnumerable<TxtRecord> TxtRecords(this IEnumerable<DnsResourceRecord> records)
         {
-            return records.OfType<TxtRecord>();
+            //Using the generic OfType<>() will return SpfRecord and TxtRecord types. The Where() ensures this method only returns TxtRecord.
+            return records.OfType<TxtRecord>().Where(x => x.GetType() == typeof(TxtRecord));
         }
 
         /// <summary>
